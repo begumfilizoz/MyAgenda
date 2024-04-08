@@ -6,6 +6,7 @@
 }
 .container
 {
+    display: grid;
     width: 100%;
     min-height: 100vh;
     background-image: url('../MyAgenda/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
@@ -18,8 +19,9 @@
     max-width: 540px;
     background-color: white; /* Set the background color */
     opacity: 0.5;
-    margin: 100px 0 20px 30px;
+    margin: 50px 0 20px 100px;
     padding: 40px 30px 70px;
+    border-radius: 30px;
 }
 .myagenda-app h2{
     display: flex;
@@ -40,6 +42,88 @@
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+}
+.weather{
+    width: 100%;
+    max-width: 540px;
+    background-color: rgba(101, 156, 211, 0.459); /* Set the background color */
+    opacity: 0.5;
+    position: absolute; /* Position the weather section absolutely */
+    top: 50px; /* Adjust top position as needed */
+    right: 100px;
+    padding: 40px 30px 70px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.row2
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    opacity: 0.8;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.weather h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: large;
+}
+.weather h1.temp{
+    text-align: center;
+    margin-top: 10px;
+}
+.weather h1.city{
+    text-align: center;
+    margin-top: 5px;
+    color: rgb(16, 16, 90);
+}
+.weather-icon{
+    width: 200px;
+    height: 200px;
+    display: block; /* Ensure the icon is treated as a block element */
+    margin: 0 auto;
+}
+.humid-icon{
+    width: 50px;
+    height: 50px;
+    display: block; /* Ensure the icon is treated as a block element */
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.wind-icon{
+    width: 50px;
+    height: 50px;
+    display: block; /* Ensure the icon is treated as a block element */
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.wind
+{
+    text-align: center;
+    margin-top: 10px;
+    font-size: medium;
+    color: rgb(16, 16, 90);
+}
+.humidity
+{
+    text-align: center;
+    font-size: medium;
+    margin-top: 10px;
+    color: rgb(16, 16, 90);
+}
+.detailtitle
+{
+    text-align: center;
+    font-size: large;
+    margin-top: 10px;
+    color: black;
 }
 input{
     flex: 1;
