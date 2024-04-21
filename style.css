@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('../MyAgenda/agenda-background.jpg');
+    background-image: url('../agenda-background.jpg');
     background-size: cover;
 }
 
