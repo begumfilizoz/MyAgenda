@@ -4,22 +4,97 @@
     font-family: Tahoma, Geneva, sans-serif;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../MyAgenda/agenda-background.jpg');
+    background-size: cover;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo {
+    font-size: 2em;
+    font-weight: 500;
+    color: #B0DBE6;
+    user-select: none;
+    font-family: "American Typewriter", "Courier New", Courier, monospace;
+}
+.navig a {
+    position: relative;
+    font-size: 1.1em;
+    color: #D7DBF2;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+    -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(14, 16, 63);
+}
+
+.navig a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height:  3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.navig a:hover::after {
+    transform: scaleX(1);
+}
+
+.navig .loginbut {
+    margin-left: 40px;
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: white;
+    color: #0B0945;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: .5s;
+
+}
+
+.navig .loginbut:hover {
+    background: #4EABC3;
+    color: #262F67;
+}
+
 .container
 {
     display: grid;
     width: 100%;
     min-height: 100vh;
-    background-image: url('../dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
+    
     padding: 10px;
 }
 .myagenda-app{
     width: 100%;
     max-width: 540px;
-    background-color: white; /* Set the background color */
-    opacity: 0.5;
-    margin: 50px 0 20px 100px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 150px 0 20px 100px;
     padding: 40px 30px 70px;
     border-radius: 30px;
 }
@@ -28,6 +103,9 @@
     align-items: center;
     margin-bottom: 20px;
     margin-left: 30px;
+    color: #B0DBE6;
+    user-select: none;
+    font-family: "American Typewriter", "Courier New", Courier, monospace;
 }
 .myagenda-app img{
     margin-left: 10px;
@@ -46,10 +124,11 @@
 .weather{
     width: 100%;
     max-width: 540px;
-    background-color: rgba(101, 156, 211, 0.459); /* Set the background color */
-    opacity: 0.5;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
     position: absolute; /* Position the weather section absolutely */
-    top: 50px; /* Adjust top position as needed */
+    top: 120px; /* Adjust top position as needed */
     right: 100px;
     padding: 40px 30px 70px;
     display: grid;
@@ -69,6 +148,9 @@
     margin-bottom: 25px;
 }
 .weather h2{
+    -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(14, 7, 49);
+    color: #93a3d0;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -76,13 +158,14 @@
     font-size: large;
 }
 .weather h1.temp{
+    color: white;
     text-align: center;
     margin-top: 10px;
 }
 .weather h1.city{
     text-align: center;
     margin-top: 5px;
-    color: rgb(16, 16, 90);
+    color: rgb(179, 230, 235);
 }
 .weather-icon{
     width: 200px;
@@ -109,21 +192,21 @@
     text-align: center;
     margin-top: 10px;
     font-size: medium;
-    color: rgb(16, 16, 90);
+    color: rgb(255, 255, 255);
 }
 .humidity
 {
     text-align: center;
     font-size: medium;
     margin-top: 10px;
-    color: rgb(16, 16, 90);
+    color: rgb(255, 255, 255);
 }
 .detailtitle
 {
     text-align: center;
     font-size: large;
     margin-top: 10px;
-    color: black;
+    color: rgb(178, 192, 227);
 }
 input{
     flex: 1;
@@ -156,6 +239,7 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    color: white;
 }
 ul li::before{
     content: '';
@@ -168,10 +252,11 @@ ul li::before{
     background-position: center;
     top: 12px;
     left: 8px;
+    color: white;
 }
 ul li.checked
 {
-    color: #555;
+    color: white;
     text-decoration: line-through;
 }
 ul li.checked::before
@@ -186,11 +271,11 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: white;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 ul li span:hover{
-    background: #edeef0;
+    background: #a2b6de;
 }

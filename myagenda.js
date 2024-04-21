@@ -89,3 +89,4 @@ async function findWeather(city)
 searchButton.addEventListener("click", ()=>{
     findWeather(searchBox.value);
 });
+
