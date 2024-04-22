@@ -23,13 +23,13 @@ loginLink.addEventListener('click', ()=> {
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "...",
-    authDomain: "...firebaseapp.com",
-    projectId: "...",
+    apiKey: "AIzaSyCGwmCNI7u84Nl9aG2Rwb-3fAzA2D5xAIc",
+    authDomain: "myagenda-c3eb6.firebaseapp.com",
+    projectId: "myagenda-c3eb6",
     storageBucket: "myagenda-c3eb6.appspot.com",
-    messagingSenderId: "...",
-    appId: "...",
-    measurementId: "..."
+    messagingSenderId: "460083733290",
+    appId: "1:460083733290:web:3e56a4f7b69bb17e9cf453",
+    measurementId: "G-0BPZQWD0B5"
   };
 
   // Initialize Firebase
