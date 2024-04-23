@@ -1,51 +1,36 @@
-const inputBox = document.getElementById("input-box");
-const list = document.getElementById("list-container");
+/*// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCGwmCNI7u84Nl9aG2Rwb-3fAzA2D5xAIc",
+    authDomain: "myagenda-c3eb6.firebaseapp.com",
+    projectId: "myagenda-c3eb6",
+    storageBucket: "myagenda-c3eb6.appspot.com",
+    messagingSenderId: "460083733290",
+    appId: "1:460083733290:web:3e56a4f7b69bb17e9cf453",
+    measurementId: "G-0BPZQWD0B5"
+  };
+
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getDatabase(app);
+*/
 const apiKey = "641b6c86de7f520632a3281c124732f1";
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const searchBox = document.querySelector(".row2 input");
 const searchButton = document.querySelector(".row2 button");
 const weatherImg = document.querySelector(".weather-icon");
+
 findWeather("Zurich");
-function addTask()
-{
-    if(inputBox.value === '')
-    {
-        alert("Please enter a task... If you don't have any, enjoy your day!");
-    }
-    else
-    {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        list.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
-    }
-    inputBox.value = "";
-    keepTasks();
-}
-list.addEventListener("click", function(e)
-{
-    if (e.target.tagName === "LI")
-    {
-        e.target.classList.toggle("checked");
-        keepTasks();
-    }
-    else if(e.target.tagName === "SPAN")
-    {
-        e.target.parentElement.remove();
-        keepTasks();
-    }
-}, false);
-function keepTasks()
-{
-    localStorage.setItem("tasks", list.innerHTML);
-}
-function bringTasks()
-{
-    list.innerHTML = localStorage.getItem("tasks");
-}
-bringTasks();
+
+
 const currentDate = new Date();
 const formattedDate = currentDate.toLocaleDateString('en-US', {
     weekday: 'long',

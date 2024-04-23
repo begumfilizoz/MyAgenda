@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge"> 
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
         <Title>MyAgenda</Title>
         <link rel = "stylesheet" href="style.css">
@@ -17,10 +19,10 @@
         </header>
         <div class = "container">
             <div class = "myagenda-app">
-                <h2>Welcome Back user!</h2>
+                <h2>Welcome Back!</h2>
                 <div class = "row">
                     <input type = "text" id = "input-box" placeholder = "What are your plans today?">
-                    <button onclick="addTask()">Add</button>
+                    <button id="add">Add</button>
                 </div>
                 <ul id="list-container">
                     <!--<li class = "checked">Task 1</li>
@@ -60,5 +62,6 @@
             </div>
         </div>
         <script src="myagenda.js"></script>
+        <script type="module" src="addlist.js" defer></script>
     </body>
 </html>

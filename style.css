@@ -247,7 +247,7 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url('../MyAgenda/radio.png');
+    background-image: url('../radio.png');
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -261,7 +261,7 @@ ul li.checked
 }
 ul li.checked::before
 {
-    background-image: url('../MyAgenda/checked.png')
+    background-image: url('../checked.png')
     
 }
 ul li span{
